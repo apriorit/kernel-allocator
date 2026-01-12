@@ -1,0 +1,10 @@
+[package]
+name = "kernel-allocator"
+version = "0.1.0"
+edition = "2024"
+authors = ["Dmytro Maslo <dmytro.maslo@apriorit.com>"]
+description = "Rust kernel-mode allocator"
+readme = "README.md"
+
+[dependencies]
+windows-sys = { version = "0.61", features = ["Wdk", "Wdk_System", "Wdk_System_SystemServices"] }
