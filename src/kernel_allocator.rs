@@ -16,6 +16,7 @@ const POOL_FLAG_PAGED: u64 = 256; // Paged pool
 /// SAFETY
 /// This allocator is only safe to use for allocations happening at `IRQL`
 /// <= `DISPATCH_LEVEL`
+#[derive(Default)]
 pub struct KernelAllocator<const FLAGS: u64>;
 
 pub type PagedAlloc = KernelAllocator<POOL_FLAG_PAGED>;
